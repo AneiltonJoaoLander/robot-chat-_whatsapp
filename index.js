@@ -3,7 +3,8 @@ const qrcode = require("qrcode-terminal");
 
 const client = new Client({
   authStrategy: new LocalAuth(),
-  puppeteer: {
+  /*remover sem 24 hr por dia */ puppeteer: {
+    executablePath: "/usr/bin/google-chrome-stable",
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   },
 });
